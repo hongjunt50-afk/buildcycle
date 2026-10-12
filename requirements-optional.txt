@@ -1,0 +1,13 @@
+# ── 可选增强依赖 ──
+# 全部不装也能正常使用。
+#
+# 说明：
+#   · 联网搜索由 app/agent/web_search.py 用 Python 标准库实现（搜狗/360/Bing），
+#     不依赖任何第三方包，因此不安装 crawl4ai / firecrawl-py（体积大、装得慢）。
+#   · 知识库检索由 app/knowledge/vector_store.py 用标准库 sqlite3 实现
+#     （关键词 LIKE 匹配），因此不需要 fastembed / sqlite-vec。
+#
+#     曾经列在这里的 fastembed / sqlite-vec 已移除：全库检索确认代码零引用。
+#
+# 本文件保留为空清单，一键安装仍会执行它（失败自动跳过，不影响启动），
+# 以便将来需要时直接往里加包即可。
